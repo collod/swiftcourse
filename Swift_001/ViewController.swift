@@ -19,12 +19,18 @@ class ViewController: UIViewController {
     
     @IBAction func buttonMain(_ sender: UIButton) {
         buttonTapped+=1
-        if buttonTapped<10 {heyLabel.text="Hey man"}
+        if buttonTapped<10 {
+            heyLabel.text="They sum up to \(Double(text1.text!)!+Double(text2.text!)!)"
+        }
         else{
             heyLabel.text="you overtapped"
         }
          
     }
+    
+    @IBOutlet weak var text1: UITextField!
+    
+    @IBOutlet weak var text2: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
